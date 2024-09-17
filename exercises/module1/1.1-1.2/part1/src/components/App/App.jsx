@@ -1,6 +1,9 @@
-import Header from "../Header/Header"
-import Content from "../Content/Content"
-import Total from "../Total/Total"
+
+
+import Content from "../Content/Content";
+import Header from "../Header/Header";
+import Total from "../Total/Total";
+
     
 
 
@@ -18,11 +21,9 @@ const App = () => {
   const exercises3 = 14;
   return (
     <div>
-      <Header course={course}/>
-      <Content part1={part1} exercises1={exercises1} 
-               part2={part2} exercises2={exercises2}
-               part3={part3} exercises3={exercises3} />
-      <Total exercises1={exercises1} exercises2={exercises2} exercises3={exercises3} />
+      <Header {...{course}}/>
+      <Content {...{part1}} {...{exercises1}} {...{part2}} {...{exercises2}} {...{part3}} {...{exercises3}}  />
+      <Total {...{exercises1}} {...{exercises2}} {...{exercises3}} />
     </div>
   )
 }
