@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Statistics from '../Statistics/Statistics'
 import Button from '../Button/Button'
+import Loading from '../Loading/Loading'
 
 const App = () => {
   // save clicks of each button to its own state
@@ -8,6 +9,15 @@ const App = () => {
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
   const [allClicks, setAll] = useState(0)
+  const [loading, setLoading] = useState(true)
+
+  setTimeout(() => {
+    setLoading(false)
+  }, 3000)
+
+  if(loading){
+    return <Loading />
+  }
 
   const handleClick = (e) => {
     if(e.target.value === 'good'){
