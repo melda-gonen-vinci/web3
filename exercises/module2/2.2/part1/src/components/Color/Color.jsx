@@ -15,7 +15,7 @@ const Color = () => {
         }}
         >
         </button>
-        couleur suivant : {colors[(colorIndex + 1) % colors.length]}  
+        next color : {colors[(colorIndex + 1) % colors.length]}  
     </div>
   );
 };
