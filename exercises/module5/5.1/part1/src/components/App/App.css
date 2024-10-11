@@ -1,0 +1,5 @@
+.button {
+  display: block; /* Make the button a block element */
+  width: 20%; /* Optional: Make the button take the full width of its container */
+  margin-bottom: 10px; /* Add some space between the buttons */
+}
