@@ -67,11 +67,11 @@ const App = () => {
   const [movies, setMovies] = useState(defaultMovies);
   const navigate = useNavigate();
 
-  const onMovieAdded = (newMovie) => {
+  const onMovieAdded = (movie) => {
     const newId = Math.max(...movies.map((movie) => movie.id)) + 1;
-    movies.id = newId;
-    console.log("Movie to add:", newMovie);
-    setMovies([...movies, newMovie]);
+    movie.id = newId;
+    console.log("Movie to add:", movie);
+    setMovies([...movies, movie]);
     navigate("/movies");
     
   };
@@ -82,7 +82,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="page">
       <Header urlLogo="https://media.istockphoto.com/id/1429764305/fr/vectoriel/bande-de-film-vierge-isol%C3%A9e-sur-le-fond-blanc.jpg?s=1024x1024&w=is&k=20&c=is5Y6cun0NC8PxJd51p4YnUoLUpyb758Bdigh4Bqn48=">
        <h1> Tous sur les films</h1>
        <Navbar />
